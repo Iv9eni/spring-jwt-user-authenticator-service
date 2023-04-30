@@ -36,12 +36,17 @@ public class User implements UserDetails {
     // Give all User's "USER" access by default.
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority("USER"));
+        return List.of(new SimpleGrantedAuthority("ROLE_USER"));
     }
 
     @Override
     public String getUsername() {
         return this.email;
+    }
+
+    @Override
+    public String getPassword() {
+        return this.password;
     }
 
     @Override

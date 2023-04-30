@@ -48,19 +48,20 @@ public class Handler {
                 .compact();
     }
 
-    public Date getExpiration(String token) {
-        return getClaim(token, Claims::getExpiration);
-    }
 
     public String generateToken(UserDetails userDetails) { return generateToken(new HashMap<>(), userDetails); }
 
     public boolean isTokenValid(String token, UserDetails userDetails) {
         final String username = getUsername(token);
-        return username.equals(userDetails.getUsername());
+        return username.equals(userDetails.getUsername()) && !isTokenExpired(token);
     }
 
     private boolean isTokenExpired(String token) {
-            return false;//        return getExpiration(token) > new Date().getDate();
+        return getExpiration(token).before(new Date());
+    }
+
+    public Date getExpiration(String token) {
+        return getClaim(token, Claims::getExpiration);
     }
 
     private Key getSignInKey() {

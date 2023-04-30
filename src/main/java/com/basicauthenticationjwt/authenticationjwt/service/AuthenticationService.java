@@ -2,9 +2,9 @@ package com.basicauthenticationjwt.authenticationjwt.service;
 
 import com.basicauthenticationjwt.authenticationjwt.model.User;
 import com.basicauthenticationjwt.authenticationjwt.repository.UserRepository;
-import com.basicauthenticationjwt.authenticationjwt.utils.AuthenticationRequest;
-import com.basicauthenticationjwt.authenticationjwt.utils.AuthenticationResponse;
-import com.basicauthenticationjwt.authenticationjwt.utils.RegisterRequest;
+import com.basicauthenticationjwt.authenticationjwt.dto.AuthenticationRequest;
+import com.basicauthenticationjwt.authenticationjwt.dto.AuthenticationResponse;
+import com.basicauthenticationjwt.authenticationjwt.dto.RegisterRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
