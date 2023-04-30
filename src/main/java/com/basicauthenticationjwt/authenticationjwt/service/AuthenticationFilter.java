@@ -22,8 +22,7 @@ public class AuthenticationFilter extends OncePerRequestFilter {
 
     private final Handler handler;
 
-
-    private UserDetailsService userDetailsService;
+    private final UserDetailsService userDetailsService;
 
     final static private int END_OF_HEADER_INDEX = 7;
 
