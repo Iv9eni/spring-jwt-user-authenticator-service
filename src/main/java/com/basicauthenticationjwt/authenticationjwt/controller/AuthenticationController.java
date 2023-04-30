@@ -1,9 +1,9 @@
 package com.basicauthenticationjwt.authenticationjwt.controller;
 
 import com.basicauthenticationjwt.authenticationjwt.service.AuthenticationService;
-import com.basicauthenticationjwt.authenticationjwt.utils.AuthenticationRequest;
-import com.basicauthenticationjwt.authenticationjwt.utils.AuthenticationResponse;
-import com.basicauthenticationjwt.authenticationjwt.utils.RegisterRequest;
+import com.basicauthenticationjwt.authenticationjwt.dto.AuthenticationRequest;
+import com.basicauthenticationjwt.authenticationjwt.dto.AuthenticationResponse;
+import com.basicauthenticationjwt.authenticationjwt.dto.RegisterRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
